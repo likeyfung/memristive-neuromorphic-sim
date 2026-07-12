@@ -270,7 +270,3 @@ Random W_rec at w≈0.03 drives 22 mV pulses between neuron populations — enou
 5. Zhao et al. (2023). Tracking neural activity from the same cells during the entire adult life of mice. *Nature Neuroscience*.
 6. Fu et al. (2017). Highly scalable multichannel mesh electronics. *PNAS*.
 7. Liu et al. (2022). Decoding cognition from spontaneous neural activity. *Nature Reviews Neuroscience*.
-
----
-
-*Tsinghua University · School of Integrated Circuits · i-BRAIN · Shenzhen Medical Academy of Research and Translation*
