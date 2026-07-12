@@ -37,18 +37,15 @@ class PFCModule(BaseModule):
         self.gamma_freq   = config.FREQ["gamma"]
         self._gamma_phase = 0.0
 
-        # Structured W_in: Cat→PFC[0:N/2], Dog→PFC[N/2:N].
-        # STDP refines this during training.
-        n_half_pfc   = config.N_PFC   // 2
-        n_half_input = config.N_INPUT // 2
-        self.W_in.w[:n_half_pfc,   :n_half_input]  = 0.40   # Cat block (high G)
-        self.W_in.w[n_half_pfc:,   n_half_input:]  = 0.40   # Dog block (high G)
-        self.W_in.w[:n_half_pfc,   n_half_input:]  = 0.005  # cross-terms (near G_off)
-        self.W_in.w[n_half_pfc:,   :n_half_input]  = 0.005
+        # Initialize W_in at a uniform medium conductance.
+        # With NEF population coding, all input neurons respond to both Cat and Dog
+        # (weighted by their encoder · semantic_pointer), so there is no natural
+        # Cat/Dog block structure. Starting at 0.10 lets STDP learn task-specific
+        # weights from a neutral state.
+        self.W_in.w[:] = 0.10
 
-        # W_rec starts near-zero: random large initial values would cross-drive
-        # the "wrong" half-population via 22+ mV pulses, erasing the input structure.
-        # STDP will build task-specific recurrent connectivity over training.
+        # W_rec starts near-zero: STDP will build task-specific recurrent
+        # connectivity over training.
         self.W_rec.w[:] = 0.001
 
         # working memory: exponential trace of recent activity
