@@ -1,8 +1,17 @@
 # Recurrent Memristive Neuromorphic System
 
-A full Python simulation of a brain-inspired neuromorphic computing platform using **ion-diffusion memristors** — built to accompany the research proposal *"Physical Instantiation of Adaptive Cognitive Dynamics through Recurrent Memristive Neuromorphic Systems"* (Likey Fung, Tsinghua University, School of Integrated Circuits).
+A Python simulation of a **recurrent neuromorphic circuit** built from ion-diffusion memristors. This is a **hardware physics simulation** — not a cognitive or AI model. It models the actual electrical and material behaviour of memristor crossbar arrays, and shows how different physical retention properties (volatile, semi-volatile, non-volatile) naturally give rise to distinct computational roles without any software workaround.
 
-The system physically instantiates adaptive cognition by mapping biological brain-region dynamics onto four memristive crossbar modules, coordinated by a software gate-control layer.
+The four crossbar modules are named after brain regions not because the simulation models the brain, but because each memristor type physically exhibits the same retention timescale as its biological counterpart:
+
+| Crossbar | Named after | Physical property | τ_diff |
+|----------|-------------|-------------------|--------|
+| HC | Hippocampus | **Volatile** — ions diffuse back quickly | 50 ms |
+| PFC | Prefrontal Cortex | **Non-volatile** — ions locked in place | ∞ |
+| OFC | Orbitofrontal Cortex | **Semi-volatile** — intermediate retention | 500 ms |
+| EC | Entorhinal Cortex | **Fixed oscillatory** — no plasticity | — |
+
+The benchmark task (Delayed Match-to-Sample) is used purely to verify that the hardware physics are correct: the volatile crossbar correctly forgets during the delay period, while the non-volatile crossbar correctly retains the pattern — this is a test of the memristor ODEs, not a demonstration of machine learning or cognition.
 
 ---
 
