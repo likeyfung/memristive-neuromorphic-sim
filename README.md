@@ -270,6 +270,39 @@ Random W_rec at w≈0.03 drives 22 mV pulses between neuron populations — enou
 
 ---
 
+## Comparison with Spaun / Neural Engineering Framework (NEF)
+
+This simulation is often confused with cognitive brain models. The table below clarifies where it sits relative to the Spaun model (Eliasmith et al., 2012) and the Neural Engineering Framework (Eliasmith & Anderson, 2003) that underlies it.
+
+| Dimension | NEF / Spaun | This simulation |
+|-----------|-------------|-----------------|
+| **Goal** | Model what computations the brain performs and how spiking neurons implement them | Model what physical memristor devices actually do when wired as a crossbar |
+| **Level** | Functional / cognitive (top-down + bottom-up hybrid) | Device physics (bottom-up only) |
+| **Representation** | High-dimensional semantic pointers — vectors that compress symbolic concepts (e.g. `BLUE ⊛ SQUARE`) | Raw conductance states `w ∈ [0,1]` and spike rasters — no symbolic structure |
+| **Memory mechanism** | Gated integrator networks with feedback loops; weights computed analytically via decoders | Memory IS the device physics: non-volatile τ=∞ retains, volatile τ=50 ms forgets — no gating needed |
+| **Connection weights** | Derived analytically from neural tuning curves (encoders/decoders) so that the population computes a target function | Physical conductances set by ion-diffusion ODE + STDP; no analytical derivation |
+| **Learning** | Weights pre-computed offline or via supervised learning then converted to spiking form; some online adaptive BG | Online STDP directly modifying memristor filament states in real time |
+| **Action selection / control** | Cortico-basal ganglia-thalamic loop implemented in spiking neurons (winner-take-all via BG inhibitory outputs) | Software gate controller (dopamine, ACh, DMN sync signals) — not implemented in neurons |
+| **Task scope** | 8–12 cognitive tasks: digit recognition, list memory, counting, question answering, fluid induction, motor control | Single DMS task used only as a physics verification check |
+| **Scale** | 2.5–6.6 million neurons | 128 LIF neurons total across all four crossbars |
+| **Decoder** | Part of the neural circuit (NEF decoders weighted into connection matrices) | External ridge regression fitted after training — not part of the circuit |
+| **Biological claim** | Claims to reproduce behavioural and neurological data observed in human participants | Claims only that device physics (τ_diff) matches biological retention timescales; makes no behavioural claims |
+
+### What this simulation shares with NEF/Spaun
+
+- **LIF neurons**: both use Leaky Integrate-and-Fire dynamics
+- **STDP**: both incorporate spike-timing-dependent plasticity (Spaun uses it in the adaptive basal ganglia component)
+- **Modular structure**: both separate memory, action/control, and sensory encoding into distinct modules
+- **DMS task**: Spaun also performs delayed match-to-sample as one of its working memory benchmarks — but via semantic pointer binding in a gated integrator, not via memristor retention physics
+
+### The key conceptual difference
+
+In Spaun, **memory is a software construct** — a gated recurrent attractor network whose weights are analytically derived so the population holds a semantic pointer stable over time. The system can forget because a gate signal is removed.
+
+In this simulation, **memory is a material property** — the non-volatile PFC crossbar holds a pattern because ions are physically locked in place (τ=10⁶ s), and the volatile HC crossbar forgets because ions physically diffuse back (τ=50 ms). No gate signal is needed; the physics does it automatically.
+
+---
+
 ## References
 
 1. Portner et al. (2025). Actor–critic networks with analogue memristors. *Nature Machine Intelligence*.
