@@ -207,7 +207,7 @@ The HC replay showing **zero** activity after training is **physically correct**
 ## Installation & Usage
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/memristive-neuromorphic-sim
+git clone https://github.com/likeyfung/memristive-neuromorphic-sim
 cd memristive-neuromorphic-sim
 pip install -r requirements.txt
 python main.py
