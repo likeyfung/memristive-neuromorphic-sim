@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+<title id="title">Wave Cognition: content, context, and neuronal recall</title>
+<desc id="desc">Learned synaptic connections store associations. Coupled local continuous states carry earlier history. Dendritic and inhibitory interactions select the neuronal ensemble that recalls a pattern.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#91a6c7" stroke-width="1.4"/></marker></defs>
+<rect width="1200" height="360" rx="20" fill="#101b30"/>
+<g font-family="Arial,Helvetica,sans-serif">
+<text x="48" y="51" fill="#8dded1" font-size="15" font-weight="700" letter-spacing="3">WAVE COGNITION / RESEARCH ARCHITECTURE</text>
+<text x="48" y="94" fill="#ffffff" font-size="30" font-weight="700">From experience to context-dependent recall</text>
+<g fill="#192b46" stroke="#38516e"><rect x="48" y="128" width="326" height="158" rx="12"/><rect x="437" y="128" width="326" height="158" rx="12"/><rect x="826" y="128" width="326" height="158" rx="12"/></g>
+<g fill="#8dded1" font-size="14" font-weight="700" letter-spacing="2"><text x="70" y="161">01 / LEARNED CONTENT</text><text x="459" y="161">02 / HISTORICAL CONTEXT</text><text x="848" y="161">03 / NEURONAL OUTPUT</text></g>
+<g fill="#ffffff" font-size="23" font-weight="700"><text x="70" y="200">Synaptic associations</text><text x="459" y="200">Local continuous state</text><text x="848" y="200">Ensemble selection</text></g>
+<g fill="#c0cfe3" font-size="17"><text x="70" y="234">Connections change with experience.</text><text x="70" y="260">Recurrent activity completes a cue.</text><text x="459" y="234">Writer spikes encode earlier events.</text><text x="459" y="260">Coupling distributes local influence.</text><text x="848" y="234">Dendrites and inhibition gate access.</text><text x="848" y="260">Reader spikes express the answer.</text></g>
+<path d="M383 208 H424 M773 208 H813" stroke="#91a6c7" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="48" y="326" fill="#a9bdd6" font-size="15">V58: 256 main neurons + 80 inhibitory neurons + 16 scalar states  •  Behavioral simulation and electrical feasibility research</text>
+</g></svg>

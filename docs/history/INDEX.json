@@ -1,0 +1,378 @@
+[
+  {
+    "source_path": "README.md",
+    "public_path": "docs/history/notes/README.txt",
+    "original_sha256": "7bdcf03a9dbd67409837a2f1451dc69f9ad33d708e29f8453df8fb0c860b68fa",
+    "public_sha256": "7bdcf03a9dbd67409837a2f1451dc69f9ad33d708e29f8453df8fb0c860b68fa",
+    "path_redacted": false,
+    "title": "Neuron\u2013wave simulation v5 \u2014 causal tasks and 4,096-node tests"
+  },
+  {
+    "source_path": "results/v1/README.md",
+    "public_path": "docs/history/notes/results__v1__README.txt",
+    "original_sha256": "00d08fc137e7c9b31acef6b0703114620fa3e74061b826436e87cabf5f4f8a22",
+    "public_sha256": "00d08fc137e7c9b31acef6b0703114620fa3e74061b826436e87cabf5f4f8a22",
+    "path_redacted": false,
+    "title": "Neuron\u2013wave behavioral simulation"
+  },
+  {
+    "source_path": "results/v2/README.md",
+    "public_path": "docs/history/notes/results__v2__README.txt",
+    "original_sha256": "9b1fe8661032ef5a216837944b2270e808a51cd671b639316fcdb968625f3e8f",
+    "public_sha256": "9b1fe8661032ef5a216837944b2270e808a51cd671b639316fcdb968625f3e8f",
+    "path_redacted": false,
+    "title": "Neuron\u2013wave simulation v2"
+  },
+  {
+    "source_path": "results/v3/README.md",
+    "public_path": "docs/history/notes/results__v3__README.txt",
+    "original_sha256": "392b170847e19410f13800d78e3471d41fd9d6259ce9e4229d141bebf24b0e3e",
+    "public_sha256": "392b170847e19410f13800d78e3471d41fd9d6259ce9e4229d141bebf24b0e3e",
+    "path_redacted": false,
+    "title": "Neuron\u2013wave simulation v3 \u2014 scalable SNN"
+  },
+  {
+    "source_path": "research/v6/README.md",
+    "public_path": "docs/history/notes/research__v6__README.txt",
+    "original_sha256": "fe5ed86299a27e413149c0f4b7116d9c8c6c02b4821cf2359a0b2fdc3bb7e354",
+    "public_sha256": "fe5ed86299a27e413149c0f4b7116d9c8c6c02b4821cf2359a0b2fdc3bb7e354",
+    "path_redacted": false,
+    "title": "Wave Cognition v6"
+  },
+  {
+    "source_path": "research/v7/README.md",
+    "public_path": "docs/history/notes/research__v7__README.txt",
+    "original_sha256": "950cf42abc51de0d99a95a1f9c09862b9957e6c6c9cc0fbe35b868d6ff6291e9",
+    "public_sha256": "950cf42abc51de0d99a95a1f9c09862b9957e6c6c9cc0fbe35b868d6ff6291e9",
+    "path_redacted": false,
+    "title": "Wave Cognition v7"
+  },
+  {
+    "source_path": "research/v8/README.md",
+    "public_path": "docs/history/notes/research__v8__README.txt",
+    "original_sha256": "572b4f8d61f3bfc429a17c4ac2f85d254c62da2ee41cc5bfaa49a97c8b589563",
+    "public_sha256": "572b4f8d61f3bfc429a17c4ac2f85d254c62da2ee41cc5bfaa49a97c8b589563",
+    "path_redacted": false,
+    "title": "Wave Cognition v8"
+  },
+  {
+    "source_path": "research/v9/README.md",
+    "public_path": "docs/history/notes/research__v9__README.txt",
+    "original_sha256": "8f10e8cc414669a5cbf235c556649d810a24961a4e455557104fea2be5b43ddb",
+    "public_sha256": "8f10e8cc414669a5cbf235c556649d810a24961a4e455557104fea2be5b43ddb",
+    "path_redacted": false,
+    "title": "V9 independent audit"
+  },
+  {
+    "source_path": "research/v10/README.md",
+    "public_path": "docs/history/notes/research__v10__README.txt",
+    "original_sha256": "bd854af1488dee1453fbd836a76c051e30ff9c2b8ce8c2c3cb3b83f813cd11bd",
+    "public_sha256": "bd854af1488dee1453fbd836a76c051e30ff9c2b8ce8c2c3cb3b83f813cd11bd",
+    "path_redacted": false,
+    "title": "V10: circuit-oriented spike/wave co-computation"
+  },
+  {
+    "source_path": "research/v11/README.md",
+    "public_path": "docs/history/notes/research__v11__README.txt",
+    "original_sha256": "ea3ea981a3f89c96fb2ce6d117284cf5122fce1e6e23cf544b0bf2d3f0a92872",
+    "public_sha256": "ea3ea981a3f89c96fb2ce6d117284cf5122fce1e6e23cf544b0bf2d3f0a92872",
+    "path_redacted": false,
+    "title": "Corrected V10 topology \u2014 V11"
+  },
+  {
+    "source_path": "research/v12/README.md",
+    "public_path": "docs/history/notes/research__v12__README.txt",
+    "original_sha256": "09d76bdb20e5274da61b595842e0f5e3dc0348977beba9ab4a825f35b3a9e3be",
+    "public_sha256": "09d76bdb20e5274da61b595842e0f5e3dc0348977beba9ab4a825f35b3a9e3be",
+    "path_redacted": false,
+    "title": "V12: RAM and latency comparison"
+  },
+  {
+    "source_path": "research/v13/README.md",
+    "public_path": "docs/history/notes/research__v13__README.txt",
+    "original_sha256": "ad18c000267369bc5c32e86ba3ee1460149ce829a17d2ba503d3930ece1355f6",
+    "public_sha256": "ad18c000267369bc5c32e86ba3ee1460149ce829a17d2ba503d3930ece1355f6",
+    "path_redacted": false,
+    "title": "V13 \u2014 circuit feasibility and loaded wave memory"
+  },
+  {
+    "source_path": "research/v14/README.md",
+    "public_path": "docs/history/notes/research__v14__README.txt",
+    "original_sha256": "0091d312877cfc31b44eef3c3c2067702c054a10d2ef1d9d64d8502bf836e8b8",
+    "public_sha256": "0091d312877cfc31b44eef3c3c2067702c054a10d2ef1d9d64d8502bf836e8b8",
+    "path_redacted": false,
+    "title": "V14 reproduction"
+  },
+  {
+    "source_path": "research/v15/README.md",
+    "public_path": "docs/history/notes/research__v15__README.txt",
+    "original_sha256": "31eca69868c15f021806ef647496b0905ce0633b0fbd4c82f7f7e405dcc1b48b",
+    "public_sha256": "31eca69868c15f021806ef647496b0905ce0633b0fbd4c82f7f7e405dcc1b48b",
+    "path_redacted": false,
+    "title": "V15: heterogeneous feedback and factorial causality"
+  },
+  {
+    "source_path": "research/v16/README.md",
+    "public_path": "docs/history/notes/research__v16__README.txt",
+    "original_sha256": "4b1580f07fa556f0a4b0daeee5d789dbe6f62c103a25ddbd638b58fb40313acb",
+    "public_sha256": "4b1580f07fa556f0a4b0daeee5d789dbe6f62c103a25ddbd638b58fb40313acb",
+    "path_redacted": false,
+    "title": "V16: benchmark the preserved V15 engine"
+  },
+  {
+    "source_path": "research/v17/README.md",
+    "public_path": "docs/history/notes/research__v17__README.txt",
+    "original_sha256": "d3f034a80a792e669cc627c639c035250be127d2be765d3286869b976c3fe38c",
+    "public_sha256": "d3f034a80a792e669cc627c639c035250be127d2be765d3286869b976c3fe38c",
+    "path_redacted": false,
+    "title": "V17 \u2014 concurrent dual-route streaming workload"
+  },
+  {
+    "source_path": "research/v18/README.md",
+    "public_path": "docs/history/notes/research__v18__README.txt",
+    "original_sha256": "de237c2b821907e9d31ebfb927364007890243c6970cc12ff0cbcd82aeb676d0",
+    "public_sha256": "de237c2b821907e9d31ebfb927364007890243c6970cc12ff0cbcd82aeb676d0",
+    "path_redacted": false,
+    "title": "V18: clean routes and learned wave-conditioned evidence gates"
+  },
+  {
+    "source_path": "research/v19/README.md",
+    "public_path": "docs/history/notes/research__v19__README.txt",
+    "original_sha256": "5d33e88dae42c4a52d0195a3f2bbba62d4588be3e20bddc83cf3c268d7664ff6",
+    "public_sha256": "5d33e88dae42c4a52d0195a3f2bbba62d4588be3e20bddc83cf3c268d7664ff6",
+    "path_redacted": false,
+    "title": "V19: modular recurrent spike\u2013wave reservoir"
+  },
+  {
+    "source_path": "research/v20/README.md",
+    "public_path": "docs/history/notes/research__v20__README.txt",
+    "original_sha256": "5bd57407f7111439fd7b2760df4397928fb49f5f210dcc338c35900e7de41051",
+    "public_sha256": "5bd57407f7111439fd7b2760df4397928fb49f5f210dcc338c35900e7de41051",
+    "path_redacted": false,
+    "title": "V20: train, calibrate, freeze, test"
+  },
+  {
+    "source_path": "research/v21/README.md",
+    "public_path": "docs/history/notes/research__v21__README.txt",
+    "original_sha256": "4ef64675a256dd5045a998be71b15ee7ce226388006f9d83b9d2933803d1e1b3",
+    "public_sha256": "4ef64675a256dd5045a998be71b15ee7ce226388006f9d83b9d2933803d1e1b3",
+    "path_redacted": false,
+    "title": "V21 \u2014 Conductance learning and complementary continuous state"
+  },
+  {
+    "source_path": "research/v22/README.md",
+    "public_path": "docs/history/notes/research__v22__README.txt",
+    "original_sha256": "f77e98da0928d5f8715ffd1a79d07a1955b2ab579db93ab062044bb3a26ecd50",
+    "public_sha256": "f77e98da0928d5f8715ffd1a79d07a1955b2ab579db93ab062044bb3a26ecd50",
+    "path_redacted": false,
+    "title": "V22 \u2014 Hidden wave state and neuronal ensemble selection"
+  },
+  {
+    "source_path": "research/v23/README.md",
+    "public_path": "docs/history/notes/research__v23__README.txt",
+    "original_sha256": "c9b66d1b9689c90c5c00d2648195ddd43be14a56f76ad3d3d1a8def5125c77f4",
+    "public_sha256": "c9b66d1b9689c90c5c00d2648195ddd43be14a56f76ad3d3d1a8def5125c77f4",
+    "path_redacted": false,
+    "title": "V23 \u2014 Learn neuronal selection before biological adaptation"
+  },
+  {
+    "source_path": "research/v24/README.md",
+    "public_path": "docs/history/notes/research__v24__README.txt",
+    "original_sha256": "37ab1f02a66c3373bbacbd031e757188f5cbb6c47d71edec9a89e0b1b3f8e3de",
+    "public_sha256": "37ab1f02a66c3373bbacbd031e757188f5cbb6c47d71edec9a89e0b1b3f8e3de",
+    "path_redacted": false,
+    "title": "V24 \u2014 Writer learning with a frozen neuronal selector"
+  },
+  {
+    "source_path": "research/v25/README.md",
+    "public_path": "docs/history/notes/research__v25__README.txt",
+    "original_sha256": "5c7fe324e9513693701bc30481f5e933c9fdfd741ec9835ff5417675dad4d953",
+    "public_sha256": "5c7fe324e9513693701bc30481f5e933c9fdfd741ec9835ff5417675dad4d953",
+    "path_redacted": false,
+    "title": "V25 \u2014 Where should local synaptic learning act?"
+  },
+  {
+    "source_path": "research/v26/README.md",
+    "public_path": "docs/history/notes/research__v26__README.txt",
+    "original_sha256": "35438c0b577182004d8993b99209f5090f205e1dae86d69801bc9f6419d1f26a",
+    "public_sha256": "35438c0b577182004d8993b99209f5090f205e1dae86d69801bc9f6419d1f26a",
+    "path_redacted": false,
+    "title": "V26 \u2014 Synapse-only supervised reachability diagnostic"
+  },
+  {
+    "source_path": "research/v27/README.md",
+    "public_path": "docs/history/notes/research__v27__README.txt",
+    "original_sha256": "33d0338c97f282c72f0a1ceab5d89d05635f0835cd727e862f8b2b127660527f",
+    "public_sha256": "33d0338c97f282c72f0a1ceab5d89d05635f0835cd727e862f8b2b127660527f",
+    "path_redacted": false,
+    "title": "V27 structural audit and next learning design"
+  },
+  {
+    "source_path": "research/v28/README.md",
+    "public_path": "docs/history/notes/research__v28__README.txt",
+    "original_sha256": "932c5fc876a11ff45a9467ebfcfd065fcfc393e053a9d882d0b91deb925c36f9",
+    "public_sha256": "932c5fc876a11ff45a9467ebfcfd065fcfc393e053a9d882d0b91deb925c36f9",
+    "path_redacted": false,
+    "title": "V28 \u2014 Input learning, neuronal information and failed selection"
+  },
+  {
+    "source_path": "research/v29/README.md",
+    "public_path": "docs/history/notes/research__v29__README.txt",
+    "original_sha256": "f1384d4cf567215f6a42f0fefdb53680b7af3493cb24ab05770f983d2674b22b",
+    "public_sha256": "f1384d4cf567215f6a42f0fefdb53680b7af3493cb24ab05770f983d2674b22b",
+    "path_redacted": false,
+    "title": "V29 reproduction"
+  },
+  {
+    "source_path": "research/v30/README.md",
+    "public_path": "docs/history/notes/research__v30__README.txt",
+    "original_sha256": "a14031089e81a7d487ff5abf79b17158b87836b771c5f4d0a4c4547584120077",
+    "public_sha256": "a14031089e81a7d487ff5abf79b17158b87836b771c5f4d0a4c4547584120077",
+    "path_redacted": false,
+    "title": "V30: separate memory, adaptation and attention experiments"
+  },
+  {
+    "source_path": "research/v43/README.md",
+    "public_path": "docs/history/notes/research__v43__README.txt",
+    "original_sha256": "e1b72f5a009170266a8430d91b017651c49ae15ae43a5d19c60bf1267cc4e6ac",
+    "public_sha256": "e1b72f5a009170266a8430d91b017651c49ae15ae43a5d19c60bf1267cc4e6ac",
+    "path_redacted": false,
+    "title": "V43 \u2014 V42 navigation audit"
+  },
+  {
+    "source_path": "research/v44/README.md",
+    "public_path": "docs/history/notes/research__v44__README.txt",
+    "original_sha256": "c1aa910566edac35d35e1e483bf87e53cfa0a62daaea750f3c78c7832806f188",
+    "public_sha256": "c1aa910566edac35d35e1e483bf87e53cfa0a62daaea750f3c78c7832806f188",
+    "path_redacted": false,
+    "title": "V44: ASIC necessity and robustness experiment"
+  },
+  {
+    "source_path": "research/v45/README.md",
+    "public_path": "docs/history/notes/research__v45__README.txt",
+    "original_sha256": "b77c8a8e1a2be9e5ca207680ceaa30968db4d10cd5545e41aed2a5d797654e2f",
+    "public_sha256": "b77c8a8e1a2be9e5ca207680ceaa30968db4d10cd5545e41aed2a5d797654e2f",
+    "path_redacted": false,
+    "title": "V45 \u2014 real connectivity, explicit spiking blocks"
+  },
+  {
+    "source_path": "research/v47/README.md",
+    "public_path": "docs/history/notes/research__v47__README.txt",
+    "original_sha256": "50b106e080942fefba55ba90eee2c97da642f6c612a259b2f268f7aa4a44b252",
+    "public_sha256": "50b106e080942fefba55ba90eee2c97da642f6c612a259b2f268f7aa4a44b252",
+    "path_redacted": false,
+    "title": "V47"
+  },
+  {
+    "source_path": "research/v48/README.md",
+    "public_path": "docs/history/notes/research__v48__README.txt",
+    "original_sha256": "53125b903622b07942893ee96b2239dcb2bfd1c0b7ec6b4d4bb192f60dcea853",
+    "public_sha256": "53125b903622b07942893ee96b2239dcb2bfd1c0b7ec6b4d4bb192f60dcea853",
+    "path_redacted": false,
+    "title": "V48 \u2014 Programmable Silicon Neuron\u2013Wave Fabric"
+  },
+  {
+    "source_path": "research/v49/README.md",
+    "public_path": "docs/history/notes/research__v49__README.txt",
+    "original_sha256": "dc3242b2d976dd008384e8889f1779cef109e4a0a520af81c666d573f64e7d8e",
+    "public_sha256": "dc3242b2d976dd008384e8889f1779cef109e4a0a520af81c666d573f64e7d8e",
+    "path_redacted": false,
+    "title": "V49 \u2014 FlyWire as a workload on a generic silicon fabric"
+  },
+  {
+    "source_path": "research/v50/README.md",
+    "public_path": "docs/history/notes/research__v50__README.txt",
+    "original_sha256": "a4f0a93f8b7cc3f6b38e4db7db7078e9b138e3a4f0b93faa1f6f1f6705a34eda",
+    "public_sha256": "a4f0a93f8b7cc3f6b38e4db7db7078e9b138e3a4f0b93faa1f6f1f6705a34eda",
+    "path_redacted": false,
+    "title": "V50 \u2014 V40 circuit plus optional local recurrent regulation"
+  },
+  {
+    "source_path": "research/v51/README.md",
+    "public_path": "docs/history/notes/research__v51__README.txt",
+    "original_sha256": "db82b61fa13700167fd3c6cdf5a3b679733c434d96960ace5430f34c9c92e5e2",
+    "public_sha256": "db82b61fa13700167fd3c6cdf5a3b679733c434d96960ace5430f34c9c92e5e2",
+    "path_redacted": false,
+    "title": "V51 \u2014 Causal division of content and access"
+  },
+  {
+    "source_path": "research/v52/README.md",
+    "public_path": "docs/history/notes/research__v52__README.txt",
+    "original_sha256": "46f0b4c9e1921c22f68944e018e3d7b54d8a25bbe7ab09402a724cd8061737a5",
+    "public_sha256": "46f0b4c9e1921c22f68944e018e3d7b54d8a25bbe7ab09402a724cd8061737a5",
+    "path_redacted": false,
+    "title": "V52 \u2014 Physical dynamics as computation"
+  },
+  {
+    "source_path": "research/v53/README.md",
+    "public_path": "docs/history/notes/research__v53__README.txt",
+    "original_sha256": "0fab220fc7523604373edefec0456082e64154ced1522f71b79cb0f9b74f091a",
+    "public_sha256": "0fab220fc7523604373edefec0456082e64154ced1522f71b79cb0f9b74f091a",
+    "path_redacted": false,
+    "title": "V53 \u2014 Major findings and architecture synthesis"
+  },
+  {
+    "source_path": "research/v54/README.md",
+    "public_path": "docs/history/notes/research__v54__README.txt",
+    "original_sha256": "c46b910408853298217f8288946d1e7634f492d7cd52c668e598c4cf384817f1",
+    "public_sha256": "c46b910408853298217f8288946d1e7634f492d7cd52c668e598c4cf384817f1",
+    "path_redacted": false,
+    "title": "V54 \u2014 V52 mapped to a complete behavioral circuit"
+  },
+  {
+    "source_path": "research/v55/README.md",
+    "public_path": "docs/history/notes/research__v55__README.txt",
+    "original_sha256": "838611ce28f421954146f3a326d306d116934f7b7b0a63058d6f1f8e5fe7edfc",
+    "public_sha256": "838611ce28f421954146f3a326d306d116934f7b7b0a63058d6f1f8e5fe7edfc",
+    "path_redacted": false,
+    "title": "V55: memory traffic, streaming power and tapeout rationale"
+  },
+  {
+    "source_path": "research/v56/README.md",
+    "public_path": "docs/history/notes/research__v56__README.txt",
+    "original_sha256": "7b3b136da006f2a4357f93a992f2ee013566604b4dadf0611b9737bb5ad03392",
+    "public_sha256": "7b3b136da006f2a4357f93a992f2ee013566604b4dadf0611b9737bb5ad03392",
+    "path_redacted": false,
+    "title": "V56: audit the existing ngspice implementation"
+  },
+  {
+    "source_path": "research/v57/README.md",
+    "public_path": "docs/history/notes/research__v57__README.txt",
+    "original_sha256": "33ae2ebaf1507b650c56088620b12098d5091c3098f469d523d12918363f48e6",
+    "public_sha256": "33ae2ebaf1507b650c56088620b12098d5091c3098f469d523d12918363f48e6",
+    "path_redacted": false,
+    "title": "V57 \u2014 Integrated tapeout decision brief"
+  },
+  {
+    "source_path": "research/v58/README.md",
+    "public_path": "docs/history/notes/research__v58__README.txt",
+    "original_sha256": "66d129374a086ac0e3686ff0ecf0c693b12952eff4b217426b0f66fb6086273c",
+    "public_sha256": "66d129374a086ac0e3686ff0ecf0c693b12952eff4b217426b0f66fb6086273c",
+    "path_redacted": false,
+    "title": "V58 \u2014 Three prespecified tests, with fair controls and electrical stress"
+  },
+  {
+    "source_path": "research/V42_FlyWire_Navigation/README.md",
+    "public_path": "docs/history/notes/research__V42_FlyWire_Navigation__README.txt",
+    "original_sha256": "4f79565ec54877b8d4a8ce2c9d6ace681c1c6c8e93b40e7c02f3a67bda892775",
+    "public_sha256": "4f79565ec54877b8d4a8ce2c9d6ace681c1c6c8e93b40e7c02f3a67bda892775",
+    "path_redacted": false,
+    "title": "V42-FlyWire Navigation Branch"
+  },
+  {
+    "source_path": "research/recovered/V40_Distributed_Neural_Memory/README.md",
+    "public_path": "docs/history/notes/research__recovered__V40_Distributed_Neural_Memory__README.txt",
+    "original_sha256": "c9cb78a77d26ee7cd3b37cf5c7a5f11f0c6936bd258ff97e0f0cf1feaf21d98d",
+    "public_sha256": "c9cb78a77d26ee7cd3b37cf5c7a5f11f0c6936bd258ff97e0f0cf1feaf21d98d",
+    "path_redacted": false,
+    "title": "V40 \u2014 Distributed neural memory under endogenous modulation"
+  },
+  {
+    "source_path": "research/model_lineage_audit/FINDINGS.md",
+    "public_path": "docs/history/notes/research__model_lineage_audit__FINDINGS.txt",
+    "original_sha256": "7af76670409984d51c7e844ec1954304b7e45ba842507d9ead93673bac913815",
+    "public_sha256": "0fee3381afc2a77554113643577c25051a3c681b02010d9a18430588d36d8ab0",
+    "path_redacted": true,
+    "title": "Recovered model evidence audit"
+  }
+]

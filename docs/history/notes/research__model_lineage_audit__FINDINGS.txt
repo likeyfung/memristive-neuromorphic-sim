@@ -1,0 +1,33 @@
+# Recovered model evidence audit
+
+This audit inspects existing source, reports and saved numeric results. No experiments were rerun. V40 was recovered byte-for-byte from /LOCAL_USER/Downloads/V40_Distributed_Neural_Memory.zip into research/recovered/V40_Distributed_Neural_Memory. All 3001 release-manifest hashes matched. Nothing in earlier models was edited.
+
+## Recommended continuation baseline: V40
+
+This is the closest recovered tested package to the user's intended co-designed neuronal/continuous-state computation. 336 cells, learned regional recurrence, dendritic VIP/SST gating, local neuronal sources, neighbor coupling and neuronal behavioral outputs. Main interface src/model40.py; full equations src/engine40.py; exact restricted symmetry reduction src/engine40_compact.py. Configuration and learned-state artifacts must travel with these files.
+
+Saved primary reciprocal condition: missing-feature F1 0.964689, 85/96 exact completions over eight memory sets. Adaptation-off scored F1 0.970848 and also85/96; therefore reciprocal default is not the maximum-F1 condition. Separate causal cohort: intact28/32 exact and F1 .951028; sources-off, couplers-off, feedback-off and recurrence-off each0/32. Reader-source-off retains28/32, so bidirectionality is implemented but not necessary for this task.
+
+Full/compact spike arrays match96/96 primary queries; specified filter/dendrite state slots reduce15360→7680. Half-step primary reciprocal exact count changes85→82; this is not complete temporal convergence. Stronger read gain improves four-feature partial-cue completion0/32→23/32, but harms fuller cues and increases activity. No universal optimal setting.
+
+V40 uses16 independent nonrotating modulatory states in this configuration. It is not proof of oscillatory superiority. Digital template comparator is perfect on the primary and supplementary sets. No silicon energy/latency advantage was measured.
+
+## Strongest independent recall confirmation: V37
+
+Location: /LOCAL_USER/Desktop/V37_Adaptive_Prototype.
+Source: src/model37.py and parent/src/engine36.py.
+Confirmation adaptive nonoscillatory feedback: F1 .982712,68/72 exact; gain-matched adaptation-off .859470,48/72. Spikes3252.375 versus3468.028 (~6.22% fewer), not measured energy. Half-step retains68/72 and F1.982712. Primary oscillatory adaptation did not show the same gain. External acquisition/recall modes and engineered roles remain.
+
+## Strongest recovered contextual-selection task: V32
+
+Location: /LOCAL_USER/Desktop/v32.
+Saved report:504/512 fresh correct,251/256 conflicting-evidence correct. Fixed neuronal ensemble readout; no wave coordinates as behavior. Separate spatial cohort127/128. Nonoscillatory comparator comparable; task-structured roles and calibration, not demonstrated autonomous continual adaptation.
+
+## Later branches
+
+V42/V44: useful rate-based normalization/navigation tests, not a more complete implementation of the coupled spiking architecture.
+V45: actual fly graph and explicit simplified spiking blocks, but failed navigation and timing checks.
+V47: corrected mappings and exact sparse/dense implementation agreement, not better cognition.
+V48/V49: fresh generic implementation/calibration branch; not an evidence-preserving continuation of V40.
+
+Recommendation: resume the recovered V40 package without silently transplanting V37/V32 scores. Retain V37 and V32 as regression task/mechanism references. Future edits require a new revision, preserved configuration and fresh evaluation.

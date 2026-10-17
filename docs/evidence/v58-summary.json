@@ -1,0 +1,105 @@
+{
+  "scope": "Aggregate statistics transcribed from the preserved local V58 results; trained weights, neural traces, and trial-level data are not included in this documentation release.",
+  "nominal": {
+    "local/intact": {
+      "episodes": 48,
+      "memory_sets": 6,
+      "mean_f1": 0.0,
+      "CI95": [
+        0.0,
+        0.0
+      ],
+      "exact_completions": 0
+    },
+    "spatial/fast_reset_erase_state": {
+      "episodes": 48,
+      "memory_sets": 6,
+      "mean_f1": 0.0,
+      "CI95": [
+        0.0,
+        0.0
+      ],
+      "exact_completions": 0
+    },
+    "spatial/fast_reset_keep_state": {
+      "episodes": 48,
+      "memory_sets": 6,
+      "mean_f1": 0.8871843434343435,
+      "CI95": [
+        0.7265782828282829,
+        0.9851010101010101
+      ],
+      "exact_completions": 38
+    },
+    "spatial/feedback_off": {
+      "episodes": 48,
+      "memory_sets": 6,
+      "mean_f1": 0.0,
+      "CI95": [
+        0.0,
+        0.0
+      ],
+      "exact_completions": 0
+    },
+    "spatial/intact": {
+      "episodes": 48,
+      "memory_sets": 6,
+      "mean_f1": 0.9434343434343434,
+      "CI95": [
+        0.8601010101010101,
+        0.993939393939394
+      ],
+      "exact_completions": 42
+    },
+    "spatial/state_erase": {
+      "episodes": 48,
+      "memory_sets": 6,
+      "mean_f1": 0.0,
+      "CI95": [
+        0.0,
+        0.0
+      ],
+      "exact_completions": 0
+    },
+    "spatial/state_held_zero": {
+      "episodes": 48,
+      "memory_sets": 6,
+      "mean_f1": 0.0,
+      "CI95": [
+        0.0,
+        0.0
+      ],
+      "exact_completions": 0
+    },
+    "spike_broadcast_local/intact": {
+      "episodes": 48,
+      "memory_sets": 6,
+      "mean_f1": 0.9434343434343434,
+      "CI95": [
+        0.8601010101010101,
+        0.993939393939394
+      ],
+      "exact_completions": 42
+    }
+  },
+  "combined_stress_mean_f1": {
+    "spatial": 0.6233793983793984,
+    "spike_broadcast_local": 0.4937493062493063
+  },
+  "combined_stress_paired_f1_difference": {
+    "mean": 0.12963009213009213,
+    "CI95": [
+      0.06850649350649347,
+      0.18975815850815855
+    ]
+  },
+  "total_spikes_reduction_fraction": 0.2577810731102713,
+  "writer_spikes_reduction_fraction": 0.7496880770574437,
+  "episodes": {
+    "nominal_and_intervention": 384,
+    "stress": 1584
+  },
+  "bootstrap_unit": "six independent memory sets",
+  "electrical_transients": 14,
+  "energy_verified": false
+}
