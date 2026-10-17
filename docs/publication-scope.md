@@ -12,9 +12,14 @@ These notes record the work as it stood at each revision. Some terminology and c
 
 ## Checks on V58
 
-Before preparing the public summary, all 85 files in the experimental source/configuration freeze were checked against their original hashes. The 183 files in the candidate source/evidence package also matched their local originals.
-
-The full and compact models produced identical neuronal spikes in the smoke test. The neutral patched-kernel regression matched the preserved kernel, and the passive-noise covariance checks passed. Replaying one ideal ngspice deck reproduced its archived counts of 45 writer and 33 receiver spikes, with finite output.
+| Check | Outcome |
+|---|---|
+| Original 85-file experimental source/configuration freeze | Every SHA-256 matched |
+| 183 copied V58 source/evidence files | Every copy matched its original |
+| Full/compact model smoke test | Identical neuronal spikes |
+| Neutral patched-kernel regression | Matched the preserved original kernel |
+| Passive-noise reference | Covariance and positive-semidefinite checks passed |
+| One ideal ngspice deck replay | Finite output; reproduced 45 writer and 33 receiver spikes |
 
 The full training and evaluation protocol was not rerun for this publication. Reported scores come from the preserved experimental artifacts. These integrity and smoke checks cover only part of the implementation.
 
