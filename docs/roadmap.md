@@ -1,18 +1,23 @@
-# Next experiments
+# Open questions
 
-[Back to the project](../README.md)
+The current result is a memory mechanism in simulation. The next experiments need to establish whether it remains useful when the circuit and task assumptions become less favorable.
 
-The next stage should connect the demonstrated memory mechanism to measurable implementation requirements while preserving the experimental controls that made the current results interpretable.
+## Leakage and calibration
 
-| Priority | Concrete next step | Evidence needed to advance |
-|---|---|---|
-| Circuit feasibility | Characterize leakage, mismatch, detector offset, and local coupling using transistor-level models and a documented process | Stable behavior over declared corners, with reproducible circuit files and calibration costs |
-| Energy comparison | Include supply currents, routing, fanout, configuration, and readout in matched implementations | Measured or validated simulated energy per successful task, with equal task quality and latency constraints |
-| Model robustness | Test new memories, broader input distributions, and independently generated holdouts | Prespecified comparisons and uncertainty over independent memory sets |
-| Useful online adaptation | Separate context inference from reward credit; compare plasticity on/off during reversal and retention | Learning curves, recovery time, retained associations, and update costs |
-| Biological relevance | Fit a declared neural dataset and predict held-out neuronal responses or perturbations | Out-of-sample neural predictions beyond an engineered synthetic task |
-| Neural-interface applications | Define a specific recording, decoding, or stimulation task with appropriate data and controls | Application-specific evidence; synthetic pattern completion alone is insufficient |
+The first hardware question is whether a local state can retain useful history at an acceptable leakage and bias cost. A small writer/state/reader circuit would allow measurements of retention, detector offset, coupling, and mismatch before committing to a larger array. Calibration effort belongs in that comparison, including how often recalibration is needed.
 
-Every new model revision belongs in a new numbered directory. Failed experiments remain part of the record. Frozen-inference experiments freeze all settings before new tests; online-learning experiments freeze the learning-rule settings while allowing only specified post-response updates. Behavioral scoring continues to use downstream neuronal activity, with direct shared-state decoding labeled as a separate diagnostic.
+## Energy at matched task performance
 
-Dynamic-state equivalents, synaptic weight storage, logical updates, host runtime, and physical energy will be reported separately.
+Fewer spikes are encouraging, but the coupled state has its own cost. A meaningful comparison needs supply currents, event routing, fanout, configuration, and readout on both sides, at matched accuracy and timing constraints. Dynamic state, stored weights, logical updates, and measured energy should remain separate quantities.
+
+## Adaptation beyond acquisition
+
+V58 acquires associations and then freezes them. Useful online adaptation would need to survive reversal, recover after a change in context, and retain earlier associations. That experiment should compare plasticity on and off and report learning curves and update costs. The failed selection and credit-assignment experiments in V25–V28 are relevant starting points.
+
+## Broader inputs and neural data
+
+The synthetic task makes the causal comparison clean, but uses engineered populations and a narrow family of histories. New tests should vary memory content and input statistics, with settings chosen before evaluation. A biological application would also need a defined recording dataset and predictions of held-out neural activity or perturbation responses.
+
+A decoding or stimulation application needs its own task and controls. Pattern completion in the present model is not yet evidence for memory restoration in a person.
+
+New experiments will use separate revision directories and fresh holdouts. In online experiments, learning-rule settings are fixed in advance and only specified post-response weight updates are permitted. Behavioral evaluation continues to use neuronal activity; direct decoding of internal state remains a diagnostic.

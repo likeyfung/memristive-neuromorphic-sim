@@ -1,38 +1,23 @@
-# Publication scope and verification
+# Archive and verification
 
-[Back to the project](../README.md)
+The repository contains the original memristive implementation, research notes for the later models, and aggregate V58 results. The newer source, trained weights, neural traces, detailed trial records, and circuit files remain in the local archive.
 
-This documentation update extends the existing public `likeyfung/memristive-neuromorphic-sim` repository. The original source directories remain unchanged. The previous root README is preserved as [original-memristive-readme.md](history/original-memristive-readme.md), from repository commit `2681bdfdb8fab163b516f2b8f04d60e3697380e9`.
+The previous repository introduction is preserved in [original-memristive-readme.md](history/original-memristive-readme.md), from commit `2681bdfdb8fab163b516f2b8f04d60e3697380e9`.
 
-## Public in this update
+## Historical records
 
-- An English overview, architecture diagram, research journey, evidence summary, and roadmap.
-- Aggregate V58 results, with separate accuracy, causal, stress, and event-count interpretations.
-- Forty-seven historical reading notes and an index of original/public-copy SHA-256 hashes. Personal home-directory prefixes are replaced with `/LOCAL_USER` in those reading copies; original local documents remain unchanged.
+The [index](history/INDEX.json) lists 47 reading copies of earlier notes, with source paths and SHA-256 hashes. Personal home-directory prefixes were replaced with `/LOCAL_USER`; the original local documents were preserved.
 
-## Retained in the local archive
+These notes record the work as it stood at each revision. Some terminology and commands have since changed, and the notes do not form standalone runnable packages. The [development history](research-history.md) explains the main branches and gaps.
 
-The newer model source and dependencies, trained model weights, saved neural traces, detailed calibration/test records, circuit decks, and raw electrical waveforms are not uploaded in this documentation release. Complete standalone copies of every historical revision are also not included. The history identifies available branches and gaps rather than implying 58 complete public model releases.
+## Checks on V58
 
-Unrelated applications, personal documents, temporary files, and downloaded third-party papers are excluded.
+Before preparing the public summary, all 85 files in the experimental source/configuration freeze were checked against their original hashes. The 183 files in the candidate source/evidence package also matched their local originals.
 
-## Checks performed before publication
+The full and compact models produced identical neuronal spikes in the smoke test. The neutral patched-kernel regression matched the preserved kernel, and the passive-noise covariance checks passed. Replaying one ideal ngspice deck reproduced its archived counts of 45 writer and 33 receiver spikes, with finite output.
 
-The complete local V58 candidate package was checked during publication preparation:
+The full training and evaluation protocol was not rerun for this publication. Reported scores come from the preserved experimental artifacts. These integrity and smoke checks cover only part of the implementation.
 
-| Check | Outcome |
-|---|---|
-| Original 85-file experimental source/configuration freeze | Every SHA-256 matched |
-| 183 copied V58 source/evidence files | Every copy matched its original |
-| Full/compact model smoke test | Identical neuronal spikes |
-| Neutral patched-kernel regression | Matched the preserved original kernel |
-| Passive-noise reference | Covariance and positive-semidefinite checks passed |
-| One ideal ngspice deck replay | Finite output; reproduced 45 writer and 33 receiver spikes |
+The verification environment was Python 3.11.2, NumPy 2.3.5, SciPy 1.17.1, Numba 0.68.0, Matplotlib 3.10.7, and ngspice 46. Earlier experiments may have used different versions.
 
-The full training and evaluation protocol was **not rerun** during publication work. Scores in this public summary come from the preserved original artifacts. The smoke checks validate a limited portion of the implementation and do not independently certify every research conclusion.
-
-Publication checks used Python 3.11.2, NumPy 2.3.5, SciPy 1.17.1, Numba 0.68.0, Matplotlib 3.10.7, and ngspice 46. These describe the verification environment, not necessarily every original research run.
-
-Historical notes are reading copies of earlier records and may contain superseded terminology or commands that refer to the local archive. They are not standalone runnable packages. The [history index](history/INDEX.json) identifies the original source paths and hashes.
-
-No new license is assigned by this documentation update. Existing notices remain applicable.
+No additional license is assigned by these documentation changes. Existing notices remain applicable.

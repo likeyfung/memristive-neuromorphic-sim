@@ -1,11 +1,10 @@
-# Public research updates
+# Changelog
 
-## 2026-10-17 — Wave Cognition documentation
+## 2026-10-17
 
-- Added a professional English overview with an architecture diagram and a V58 evidence table.
-- Documented the available research journey, including model branches, negative results, circuit studies, and remaining experiments.
-- Published aggregate results and 47 historical reading notes with a provenance index.
-- Preserved the original memristive implementation and archived its previous README.
-- Clarified that newer source, trained weights, neural traces, and detailed data remain in the local archive for this documentation release.
+- Added research notes covering the model's development through V58, including separate branches and unsuccessful experiments.
+- Added aggregate V58 results, methods, and open questions.
+- Archived the previous README and 47 historical notes with source hashes.
+- Updated the introduction and instructions for running the original memristive model.
 
-This is a publication and documentation update, not a new model or a newly tuned experiment.
+The original Python implementation is unchanged. Newer model source and detailed experiment data remain in the local archive.

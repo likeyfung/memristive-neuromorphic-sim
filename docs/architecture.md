@@ -1,58 +1,35 @@
-# Architecture and research question
+# Model
 
-[Back to the project](../README.md) · [V58 evidence](results-v58.md)
+The current memory model separates the connections that store an association from the state that makes it accessible. A partial cue activates learned recurrent connections. Earlier activity changes a local continuous state, which acts through dendritic and inhibitory pathways to favor one reader population over another.
 
-## Content, access, and output
+## Neural dynamics
 
-The current memory experiment separates learned association content from history-dependent access. Synaptic weights encode associations acquired during exposure. A local continuous state carries information about earlier events. Dendritic and inhibitory interactions determine which neuronal ensemble expresses the stored association when a partial cue arrives.
+V58 contains 256 main neurons and 80 inhibitory neurons arranged over 16 tiles. Each main neuron has twelve reduced dendritic compartments: eight basal, three apical, and one trunk. Inputs pass through AMPA/NMDA-like filters before dendritic integration and a threshold/reset soma. The inhibitory population contains PV and paired SST/VIP motifs.
 
-```mermaid
-flowchart LR
-    H[Earlier event history] --> W[Writer neurons]
-    W --> S[16 local continuous states]
-    S <-->|Neighbor coupling| S2[Adjacent states]
-    S --> D[Local detector and VIP/SST gating]
-    P[Partial sensory cue] --> R[Reader neurons]
-    M[Learned recurrent connections] --> R
-    D --> R
-    R --> O[Pattern completion in neuronal spikes]
-    O --> E[External scoring only]
-```
+Writer spikes drive the local continuous state. Neighboring tiles exchange state through reciprocal coupling, and local detectors feed back into the inhibitory circuit. Reader neurons then respond to a partial sensory cue and learned recurrent input. Their spikes are the behavioral output; the evaluator has no direct access to the shared-state coordinates.
 
-## Neuron and circuit components
+The selected V58 configuration uses sixteen nonoscillatory scalar states. Reader emission is disabled, so the demonstrated modulation path runs from writers, through shared state, to readers. A benefit from reciprocal reader emission has not been established.
 
-| Component | Implemented research abstraction | Proposed physical interpretation |
-|---|---|---|
-| Main neurons | 256 cells with 12 reduced dendritic compartments: 8 basal, 3 apical, 1 trunk; synaptic filtering, nonlinear dendritic integration, threshold/reset soma, optional adaptation | Local capacitive state, conductance/current paths, comparators and reset circuitry |
-| Inhibitory cells | 80 cells, organized as PV and paired SST/VIP motifs over 16 tiles | Local inhibitory and disinhibitory circuits |
-| Association storage | Bounded recurrent weights changed by local pre/post activity during acquisition | Programmable synaptic conductances; a characterized programming circuit is still required |
-| Shared state | 16 nonrotating scalar states in the selected V58 configuration | Leaky local gm-C states with neighboring couplers |
-| Behavioral output | Reader-neuron spikes after an identical partial cue | Observable event activity, rather than a direct state-vector decoder |
+These are reduced engineering models of neurons and synapses. Their compartment names and inhibitory labels describe the intended mechanisms, but the model has not been fitted to a particular recorded biological circuit.
 
-These are reduced engineering neurons. The AMPA/NMDA-like filters, compartments, and inhibitory labels do not establish biophysical fidelity to a specific recorded cell or circuit.
+## Learning and recall
 
-The compact solver groups equivalent basal branches while retaining the full model's conditions for equivalence. It is a numerical optimization, not a claim that every possible 12-compartment circuit can always be reduced this way.
+Association acquisition uses bounded local pre/post potentiation. Learned recurrent feedback is disabled during acquisition and enabled for recall. Operating points are calibrated on training histories and selected on separate validation histories. For V58, six final memory sets are acquired and their weights frozen before new test histories are generated.
 
-## What is the algorithm?
+Inference consists of integrating synaptic, dendritic, inhibitory, and continuous-state dynamics. There is no fitted classifier on the shared state in the behavioral path. Pattern completion is assessed by whether uncued feature neurons become active in the appropriate population.
 
-The inference algorithm is the coupled evolution of neuronal, synaptic, and local continuous states. It combines event-driven synaptic input, dendritic integration, spiking inhibition, recurrent pattern completion, and history-dependent modulation. There is no fitted classifier on the shared-state coordinates in the current behavioral path.
+V58 therefore tests learned associations under frozen recall. Earlier attempts at online adaptation use different protocols and checkpoints; they are described in the [development history](research-history.md).
 
-V58 acquisition uses bounded local pre/post potentiation. Learned recurrent feedback is disabled during acquisition and enabled during recall. Candidate operating points are calibrated on training histories and selected on validation histories. The six final memory sets are acquired and their weights frozen before new test histories are generated. This is **acquisition followed by frozen recall**, not a demonstration of continual online adaptation. Earlier online-adaptation experiments are tracked separately in the [history](research-history.md).
+## Numerical implementation
 
-The selected V58 setting has reader emission disabled. The demonstrated path is writer → shared state → reader; beneficial reciprocal reader emission remains unestablished.
+The full solver represents all twelve dendritic compartments. A compact solver groups equivalent basal branches when their input maps and parameters satisfy the required symmetry. Full and compact spike outputs are checked against each other. This reduction depends on the configured circuit and cannot be assumed for arbitrary compartment models.
 
-## Does a neuron have an ALU or memory?
+## Circuit interpretation
 
-A neuron in the proposed physical circuit is a dynamical circuit element, rather than an instruction-executing ALU. Nevertheless, its voltages, filter states, adaptation state, and synaptic conductances retain information. The accurate distinction is **physical local state and synaptic storage**, not “no memory.” The Python simulator still uses ordinary CPU arithmetic and memory to solve the equations.
+The proposed physical implementation represents dynamics using local capacitive states, conductance/current paths, comparators, and reset circuitry. A neuron would not execute ALU instructions, but it would retain information in voltages, filter states, adaptation, and synaptic conductances. The Python simulator uses ordinary CPU arithmetic and memory to integrate those equations.
 
-Physical implementation also requires configuration, routing, calibration, and input/output circuitry. A complete architecture comparison must count these costs, rather than comparing only a capacitor with a full digital system.
+Programming, routing, calibration, and input/output circuitry remain part of the implementation cost. The behavioral electrical models do not yet provide a transistor-level design or a measured supply-energy comparison.
 
-## Relation to the original repository
+V54 mapped a V52 neural workload to electrical blocks. V58 uses the related learned-memory configuration and tests a smaller electrical loop under disturbances. Those experiments address different configurations; the full memory task has not been validated as a fabricated circuit.
 
-The original root-level model explores memristive retention, recurrent modules, population coding, gating, and externally decoded tasks. The current Wave Cognition model is a distinct code lineage with a different neural output interface and experimental protocol. Results from those tracks must not be combined into a single claimed system score. The original code remains in place; its [historical README](history/original-memristive-readme.md) is preserved as a dated artifact that can contain superseded wording.
-
-## Hardware scope
-
-V54 maps a particular V52 workload to behavioral electrical blocks; V55–V57 analyze costs and audit those traces. V58 returns to the learned-memory configuration and adds small-loop electrical stress experiments. These are separate configurations of a related research architecture. Their successes do not constitute a single validated chip that simultaneously learns, reproduces a fly circuit, decodes human brain recordings, and saves measured power.
-
-No foundry PDK, transistor-layout verification, fabricated chip, tissue recording, or clinical experiment has been demonstrated by the evidence described here. This documentation release does not upload the current model source, trained weights, or detailed data.
+The earlier [root-level memristive implementation](../README.md#running-the-original-model) is a separate code lineage with an external task decoder. Its results should be read separately from the current neuronal-output experiments.

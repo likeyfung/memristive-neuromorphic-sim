@@ -1,50 +1,48 @@
-# V58: evidence and interpretation
+# V58: history-dependent recall
 
-[Back to the project](../README.md) · [Public aggregate statistics](evidence/v58-summary.json)
+V58 tests whether earlier events can select a later neuronal response when the present input is held fixed. It also compares spatially coupled state with local-state controls and examines sensitivity to modeled electrical disturbances.
 
-V58 asks three prespecified questions: does earlier history select a later neuronal ensemble; how does spatial state coupling compare with equally calibrated local controls; and how sensitive is the result to modeled electrical disturbances?
+The [aggregate results](evidence/v58-summary.json) are public. Source, weights, and trial-level records remain in the local archive; see the [archive notes](publication-scope.md).
 
-## Experimental design
+## Method
 
-Three families receive equal 12-candidate training searches; the top three candidates per family are assessed on separate validation histories. Each family acquires six final memory sets, saves its learned weights, and freezes the relevant sources and settings before new evaluation histories are generated. Test results are not used to retune the system.
+Three model families receive the same twelve-candidate training budget. The top three candidates in each family are evaluated on separate validation histories. Each selected model acquires six final memory sets. Weights, settings, and relevant source files are then frozen before evaluation histories are generated.
 
-The causal cohort has eight episodes per memory set and condition, at 350 and 950 ms delays. Earlier history differs across paired contexts, but inputs from 60 ms onward, including the partial cue, are identical. The output is measured from reader-neuron spikes. F1 scores pattern completion after excluding directly cued features; ensemble-selection accuracy and exact completion are separate metrics.
+Each causal condition has eight episodes per memory set, with delays of 350 or 950 ms. Within a context pair, inputs from 60 ms onward are identical, including the partial cue. The earlier context is the only input difference. F1 measures pattern completion in reader-neuron spikes, excluding the features directly supplied in the cue.
 
-There are 384 nominal/intervention episodes and 192 corresponding pairs. The stress cohort has 1,584 episodes across three families and eleven conditions, with two device draws per memory set. Intervals bootstrap the six memory sets. This is a small number of independent clusters and does not characterize a manufacturing yield distribution.
+The nominal and intervention cohort contains 384 episodes and 192 pairs. The stress cohort contains 1,584 episodes across three model families and eleven conditions, with two device draws per memory set. Confidence intervals bootstrap the six memory sets rather than individual queries.
 
-## Nominal and causal results
+## Recall and interventions
 
-| Configuration | Mean F1 | 95% cluster-bootstrap interval | Interpretation |
-|---|---:|---:|---|
-| Spatial, intact | 0.943 | 0.860–0.994 | Learned content recalled under history-dependent access |
-| Spike broadcast with local state | 0.943 | 0.860–0.994 | Equal observed nominal performance |
-| Isolated local state | 0.000 | 0.000–0.000 | Cannot deliver remote context in this setup |
-| Spatial, shared state erased | 0.000 | 0.000–0.000 | The tested state intervention disrupts recall |
-| Spatial, feedback disabled | 0.000 | 0.000–0.000 | The state-to-neuron feedback path is causally necessary here |
-| Spatial, state held at zero | 0.000 | 0.000–0.000 | Continued state suppression also disrupts recall |
-| Fast neuronal reset, shared state retained | 0.887 | 0.727–0.985 | Retained state supports substantial recovery in this diagnostic |
-| Fast neuronal reset and shared-state erase | 0.000 | 0.000–0.000 | Removing both eliminates that recovery |
+| Condition | Mean F1 | 95% interval |
+|---|---:|---:|
+| Spatial coupling, intact | 0.943 | 0.860–0.994 |
+| Spike broadcast with local state | 0.943 | 0.860–0.994 |
+| Isolated local state | 0.000 | 0.000–0.000 |
+| Spatial coupling, state erased | 0.000 | 0.000–0.000 |
+| Spatial coupling, feedback disabled | 0.000 | 0.000–0.000 |
+| Spatial coupling, state held at zero | 0.000 | 0.000–0.000 |
+| Fast neuronal reset, state retained | 0.887 | 0.727–0.985 |
+| Fast neuronal reset, state erased | 0.000 | 0.000–0.000 |
 
-The intact spatial circuit has 42/48 exact completions, 46/48 correct ensemble selections, and both contexts correct in 23/24 matched pairs. These measures answer different questions and should not be substituted for one another.
+The intact spatial model completed 42 of 48 patterns exactly and selected the correct ensemble in 46 of 48 episodes. Both contexts were correct in 23 of 24 matched pairs.
 
-
+The broadcast control ties nominal recall. The intervention results therefore support a causal role for shared state and its feedback within the spatial model, rather than an accuracy advantage over every alternative. Retaining state after a fast neuronal reset also supports substantial recovery, whereas erasing both removes that recovery.
 
 ## Stress and event counts
 
-Under the combined engineering stress model, mean F1 is **0.6234** for spatial coupling and **0.4937** for spike broadcast. The paired difference is **0.1296**, with 95% cluster-bootstrap interval **0.0685–0.1898**. Several other stress conditions tie, and a stronger thermal-noise condition has a small negative point estimate for the spatial advantage. The full condition table remains in the local research archive; the main comparisons are included in the [public aggregate summary](evidence/v58-summary.json).
+Under combined modeled mismatch, leakage, and noise, mean F1 was 0.6234 for spatial coupling and 0.4937 for spike broadcast. The paired difference was 0.1296, with a 95% interval of 0.0685–0.1898. Several individual stress conditions tied; the stronger thermal-noise condition had a small negative point estimate for the spatial advantage. The result is specific to the tested disturbance model and six independent memory sets.
 
-At equal observed nominal recall, the spatial circuit emits **25.8% fewer total spikes** and **75.0% fewer writer spikes** than broadcast. Recurrent contact deliveries are slightly higher, so this is not a reduction in every operation category. Converting events to joules requires routing, fanout, bias, calibration, and readout costs. The [public aggregate summary](evidence/v58-summary.json) explicitly marks energy verification as false; the detailed cost assumptions remain in the local archive.
+At equal observed nominal recall, the spatial model emitted 25.8% fewer total spikes and 75.0% fewer writer spikes. Recurrent contact deliveries were slightly higher. Translating these counts into energy requires the cost of coupling, routing, fanout, bias, calibration, and readout. No supply-energy saving has been measured.
 
+## Electrical checks
 
+Fourteen ngspice transients tested a small writer/state/receiver loop under ideal, feedback-off, mismatch, injected-noise, leakage, and combined conditions. All outputs were finite, though combined disturbances substantially changed receiver spike counts across draws.
 
-## Electrical evidence
+These checks use behavioral circuit blocks and assumed parameters. They do not validate a full memory task in transistor-level hardware. The small number of disturbance draws is also insufficient to estimate manufacturing yield.
 
-Fourteen ngspice transients test a small writer/state/receiver loop under ideal, feedback-off, mismatch, injected-noise, leakage, and combined conditions. All recorded transients are finite. Combined disturbances substantially change receiver spike counts across draws. These are behavioral circuit blocks with assumed parameters, not transistor-level PDK validation or a full memory-task circuit validation.
+## Interpretation
 
-The electrical summaries, netlists, logs, and raw transients remain in the local research archive. This documentation release publishes their aggregate findings, rather than the detailed artifacts.
+The experiment shows that a constrained synthetic neural circuit can recall different stored content after different histories, even when its present inputs match. Learned recurrent connections and the state-dependent access path have distinguishable roles in that result.
 
-## Reproducibility and evidence boundaries
-
-The preserved local source freeze contains 85 hashed source/configuration files, including learned weights and inherited model dependencies. During publication preparation, all 85 files were checked against the original hashes. Full/compact, neutral-kernel, and passive-noise smoke checks passed; one electrical deck reproduced its archived event counts. The complete source/data package is not included in this documentation release. Historical V40 had a broader solver comparison; that historical coverage is not relabeled as a new V58 validation cohort.
-
-This evidence supports history-dependent neural selection and specific causal mechanisms in a constrained synthetic task. It does not establish an oscillatory-wave necessity, universal superiority to digital algorithms, brain identity restoration, clinical memory improvement, or measured ASIC efficiency.
+The selected state is nonoscillatory, and the task uses engineered populations and synthetic histories. Establishing biological relevance or a hardware advantage requires further experiments. The [open questions](roadmap.md) describe those next steps; the [archive notes](publication-scope.md) record integrity and smoke checks performed on the preserved implementation.
