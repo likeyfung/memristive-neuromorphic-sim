@@ -1,4 +1,4 @@
-# Archive and verification
+# Research archive and verification
 
 The repository contains the original memristive implementation, research notes for the later models, and aggregate V58 results. The newer source, trained weights, neural traces, detailed trial records, and circuit files remain in the local archive.
 

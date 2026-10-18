@@ -34,7 +34,7 @@ See the [V58 methods and results](docs/results-v58.md) for controls, uncertainty
 | Dendritic and inhibitory pathways | Regulate which reader population responds |
 | Reader-neuron spikes | Express the completed pattern |
 
-## Development
+## Research history
 
 | Stage | Focus |
 |---|---|

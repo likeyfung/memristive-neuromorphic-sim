@@ -1,4 +1,4 @@
-# Model
+# Neural circuit model
 
 The current memory model separates the connections that store an association from the state that makes it accessible. A partial cue activates learned recurrent connections. Earlier activity changes a local continuous state, which acts through dendritic and inhibitory pathways to favor one reader population over another.
 

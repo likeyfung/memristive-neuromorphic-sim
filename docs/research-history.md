@@ -1,4 +1,4 @@
-# Development history
+# Research history
 
 The project has several branches. Some revisions introduce a model, others change a task or audit an earlier result. Version numbers track that work; they are not a sequence of interchangeable benchmark releases. The [archive index](history/INDEX.json) contains the available original notes.
 

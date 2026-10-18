@@ -1,4 +1,4 @@
-# Open questions
+# Research priorities
 
 The current result is a memory mechanism in simulation. The next experiments need to establish whether it remains useful when the circuit and task assumptions become less favorable.
 
